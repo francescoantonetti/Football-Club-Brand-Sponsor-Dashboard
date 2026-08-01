@@ -150,7 +150,7 @@ def apply_theme() -> None:
     st.markdown(
         f"""
         <style>
-
+        @import url("https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap");
         /* =====================================================
            VARIABILI GENERALI
         ===================================================== */
@@ -184,29 +184,45 @@ def apply_theme() -> None:
         body,
         [data-testid="stAppViewContainer"],
         [data-testid="stApp"] {{
-            background-color: var(--page-background);
-        }}
-
-        html,
-        body,
-        p,
-        div,
-        span,
-        label,
-        input,
-        textarea,
-        select,
-        button {{
-            font-family:
-                Inter,
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                Roboto,
-                Helvetica,
-                Arial,
-                sans-serif;
-        }}
+          background-color: var(--page-background);
+          font-family:
+              "Source Sans 3",
+              "Source Sans Pro",
+              -apple-system,
+              BlinkMacSystemFont,
+              "Segoe UI",
+              sans-serif !important;
+          color: var(--text-primary);
+         }}
+         button,
+         input,
+         textarea,
+         select,
+        [data-baseweb="select"],
+        [data-baseweb="input"],
+        [data-testid="stSidebar"] {{
+           font-family:
+               "Source Sans 3",
+               "Source Sans Pro",
+              -apple-system,
+              BlinkMacSystemFont,
+              "Segoe UI",
+              sans-serif !important;
+          }}
+          h1,
+          h2,
+          h3,
+          h4,
+          h5,
+          h6 {{
+              font-family:
+                  "Source Sans 3",
+                  "Source Sans Pro",
+                  -apple-system,
+                  BlinkMacSystemFont,
+                  "Segoe UI",
+                  sans-serif !important;
+           }}
 
         [data-testid="stMain"] {{
             background-color: var(--page-background);
